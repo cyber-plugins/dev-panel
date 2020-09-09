@@ -10,16 +10,11 @@ var react_1 = tslib_1.__importStar(require("react"));
 
 var BasicButton_1 = tslib_1.__importDefault(require("../../components/BasicButton"));
 
-require("./style.less");
-
-var style_less_1 = tslib_1.__importDefault({});
-
 function ReloadButton() {
   var handleClick = react_1.useCallback(function () {
     window.location.reload();
   }, []);
   return react_1.default.createElement(BasicButton_1.default, {
-    className: style_less_1.default.reload,
     onClick: handleClick
   }, "\u5237\u65B0\u7F51\u9875");
 }

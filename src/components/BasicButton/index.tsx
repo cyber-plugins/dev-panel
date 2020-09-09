@@ -1,12 +1,11 @@
 import React, { useMemo } from "react";
-import classNames from "classnames";
-import css from "./style.less";
+import css from "./style";
 
 export default function BasicButton(props: any) {
-  const { className, children, ...otherProps } = props;
-  const computedClassName = useMemo(() => classNames(css.basic_button, className), [className]);
+  const { style, children, ...otherProps } = props;
+  const computedClassName = useMemo(() => ({ ...css.basic_button, ...style }), [style]);
   return (
-    <div className={computedClassName} {...otherProps}>
+    <div style={computedClassName} {...otherProps}>
       {children}
     </div>)
 };

@@ -8,24 +8,18 @@ var tslib_1 = require("tslib");
 
 var react_1 = tslib_1.__importStar(require("react"));
 
-var classnames_1 = tslib_1.__importDefault(require("classnames"));
-
-require("./style.less");
-
-var style_less_1 = tslib_1.__importDefault({
-  "basic_button": "style__basic_button___4b3ac4f4"
-});
+var style_1 = tslib_1.__importDefault(require("./style"));
 
 function BasicButton(props) {
-  var className = props.className,
+  var style = props.style,
       children = props.children,
-      otherProps = tslib_1.__rest(props, ["className", "children"]);
+      otherProps = tslib_1.__rest(props, ["style", "children"]);
 
   var computedClassName = react_1.useMemo(function () {
-    return classnames_1.default(style_less_1.default.basic_button, className);
-  }, [className]);
+    return tslib_1.__assign(tslib_1.__assign({}, style_1.default.basic_button), style);
+  }, [style]);
   return react_1.default.createElement("div", tslib_1.__assign({
-    className: computedClassName
+    style: computedClassName
   }, otherProps), children);
 }
 

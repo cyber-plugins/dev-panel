@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 import BasicButton from "../../components/BasicButton";
-import css from "./style.less";
 
 
 export default function DisplayLocation() {
@@ -8,7 +7,7 @@ export default function DisplayLocation() {
     alert(window.location.href)
   }, []);
   return (
-    <BasicButton className={css.display} onClick={handleClick}>
+    <BasicButton onClick={handleClick}>
       显示location.href
     </BasicButton>)
 };
