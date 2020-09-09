@@ -1,6 +1,6 @@
 {
   "name": "@cyber-plugins/dev-panel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "便于h5调试的工具面板",
   "main": "./dist/index.js",
   "scripts": {
